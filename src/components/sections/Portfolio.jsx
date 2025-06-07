@@ -1,28 +1,33 @@
 import { motion as Motion } from 'framer-motion';
 import PortfolioCard from '../common/PortfolioCard';
 
+import cultivoImg from '../../assets/images/cultivo.png';
+import siresitaImg from '../../assets/images/siresita.png';
+
 const projects = [
   {
-    image: 'https://placehold.co/600x400/111827/3B82F6?text=Project+One',
-    title: 'Project Website Modern',
-    description: 'Deskripsi singkat mengenai proyek ini, tantangan yang dihadapi, dan solusi yang diimplementasikan.',
-    tags: ['React', 'Tailwind CSS', 'Vite'],
-    liveUrl: '#',
-    repoUrl: '#',
+    image: cultivoImg, 
+    title: 'Cultivo',
+    description:
+      'platform pemesanan tiket Agrowisata yang menawarkan kemudahan bagi konsumen untuk menjelajahi, memesan, dan menikmati berbagai produk wisata.',
+    tags: ['React+Vite', 'Tailwind CSS', 'Node', 'Express'],
+    liveUrl: 'https://cultivo.infinitelearningproject.com/',
+    repoUrl: '',
   },
   {
-    image: 'https://placehold.co/600x400/1F2937/3B82F6?text=Project+Two',
-    title: 'Aplikasi Analitik Data',
-    description: 'Aplikasi yang dirancang untuk memecahkan masalah sehari-hari dengan antarmuka yang bersih dan modern.',
-    tags: ['Next.js', 'Firebase', 'Chart.js'],
+    image: siresitaImg,
+    title: 'Siresita',
+    description:
+      'Aplikasi wisata Sumatera Utara menggunakan implimentasi AI untuk memberikan rekomendasi tempat wisata berdasarkan preferensi pengguna.',
+    tags: ['React+Vite', 'Tailwind CSS', 'Express', 'Tensorflow'],
     liveUrl: '#',
     repoUrl: '#',
   },
   {
     image: 'https://placehold.co/600x400/6B7280/3B82F6?text=Project+Three',
-    title: 'Platform E-Commerce',
-    description: 'Platform visualisasi data yang membantu bisnis mengambil keputusan berdasarkan wawasan yang akurat.',
-    tags: ['React Native', 'Node.js', 'Stripe'],
+    title: 'Develop',
+    description: 'Sedang dalam masa pengembangan.',
+    tags: ['React+Vite', 'Node.js', 'Express'],
     liveUrl: '#',
     repoUrl: '#',
   },
@@ -31,19 +36,15 @@ const projects = [
 const Portfolio = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   return (
-    <section id="portfolio" className="py-24 bg-light-background dark:bg-dark-background">
+    <section id="portfolio" className="relative py-24 bg-transparent">
       <div className="container px-6 mx-auto">
         <Motion.div
           className="mb-16 text-center"
@@ -52,14 +53,13 @@ const Portfolio = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold md:text-5xl text-light-text dark:text-dark-text">
+          <h2 className="text-4xl font-bold md:text-5xl text-light-text dark:text-dark-text drop-shadow-sm">
             Featured Projects
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-lg text-subtle dark:text-subtle-dark">
+          <p className="max-w-2xl mx-auto mt-4 text-lg text-subtle dark:text-subtle-dark drop-shadow-sm">
             Beberapa karya pilihan yang menunjukkan keahlian dan hasrat saya.
           </p>
         </Motion.div>
-
         <Motion.div
           className="grid gap-10 md:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}

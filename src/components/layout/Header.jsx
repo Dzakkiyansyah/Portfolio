@@ -1,4 +1,3 @@
-// src/components/layout/Header.jsx
 import { useState } from 'react';
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
