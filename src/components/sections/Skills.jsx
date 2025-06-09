@@ -33,7 +33,7 @@ const Skills = () => {
             Skills & Tools
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-lg text-subtle dark:text-subtle-dark drop-shadow-sm">
-            Teknologi dan alat yang saya gunakan untuk merancang dan membangun aplikasi.
+            The technologies and tools I use to design and build applications.
           </p>
         </Motion.div>
         <Motion.div

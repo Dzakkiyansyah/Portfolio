@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import AboutPage from './pages/AboutPage';
-import HomePage from './pages/HomePage';
 import AnimatedBackground from './components/common/AnimatedBackground';
 import LoadingScreen from './components/common/LoadingScreen';
 import MaintenanceWrapper from './components/layout/MaintenanceWrapper';
+import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage';
+import NotFoundPage from './pages/NotFoundPage'; 
 
 // --- PUSAT KONTROL MAINTENANCE ---
 const maintenanceConfig = {
@@ -45,6 +46,10 @@ function App() {
               </MaintenanceWrapper>
             }
           />
+
+          {/* Rute "Catch-all" untuk halaman Not Found */}
+          {/* BARIS INI DITAMBAHKAN DI PALING BAWAH */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </Router>

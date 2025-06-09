@@ -21,11 +21,10 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="max-w-2xl mx-auto mt-4 mb-10 text-lg text-subtle dark:text-subtle-dark drop-shadow-sm">
-            Saya selalu terbuka untuk berdiskusi tentang proyek baru, ide
-            kreatif, atau peluang untuk menjadi bagian dari visi Anda.
+            I am always open to discussing new projects, creative ideas, or opportunities to be a part of your vision.
           </p>
           <Motion.a
-            href="mailto:emailanda@example.com"
+            href="mailto:dzakkiyansyah@gmail.com"
             className="inline-block px-10 py-4 font-bold text-white rounded-lg bg-primary"
             whileHover={{
               scale: 1.05,

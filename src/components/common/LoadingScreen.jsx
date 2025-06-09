@@ -1,14 +1,30 @@
-import { motion as Motion } from 'framer-motion';
+import { animate, motion as Motion, useMotionValue, useTransform } from 'framer-motion';
+import { useEffect } from 'react';
 
 const LoadingScreen = () => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    const controls = animate(count, 100, {
+      duration: 1.2,
+      ease: 'easeInOut',
+    });
+
+    return controls.stop;
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-light-background dark:bg-dark-background">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-dark-background">
       <Motion.div
-        className="w-16 h-16 border-4 border-solid rounded-full border-primary border-t-transparent"
-        animate={{ rotate: 360 }}
-        transition={{ loop: Infinity, duration: 1, ease: "linear" }}
+        className="flex items-center text-6xl font-extrabold tracking-tighter text-dark-text"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.5 }}
       >
-        <span className="sr-only">Loading...</span>
+        <Motion.h1>{rounded}</Motion.h1>
+        <h1>%</h1>
       </Motion.div>
     </div>
   );

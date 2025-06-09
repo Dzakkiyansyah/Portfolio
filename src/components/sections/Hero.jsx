@@ -21,7 +21,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Fullstack Developer & UI/UX Enthusiast.
+          Web Developer & UI/UX Enthusiast.
         </Motion.p>
       </div>
     </section>

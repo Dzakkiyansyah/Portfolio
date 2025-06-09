@@ -2,34 +2,36 @@ import { motion as Motion } from 'framer-motion';
 import PortfolioCard from '../common/PortfolioCard';
 
 import cultivoImg from '../../assets/images/cultivo.png';
+import portfolioImg from '../../assets/images/Portfolio.png';
 import siresitaImg from '../../assets/images/siresita.png';
 
 const projects = [
   {
-    image: cultivoImg, 
+    image: cultivoImg,
     title: 'Cultivo',
     description:
-      'platform pemesanan tiket Agrowisata yang menawarkan kemudahan bagi konsumen untuk menjelajahi, memesan, dan menikmati berbagai produk wisata.',
+      'Agrotourism ticket booking platform that offers convenience for consumers to explore, book, and enjoy various tourism products.',
     tags: ['React+Vite', 'Tailwind CSS', 'Node', 'Express'],
     liveUrl: 'https://cultivo.infinitelearningproject.com/',
-    repoUrl: '',
+    repoUrl: 'https://github.com/kuncoro-0927/frontend-cultivo-project',
   },
   {
     image: siresitaImg,
     title: 'Siresita',
     description:
-      'Aplikasi wisata Sumatera Utara menggunakan implimentasi AI untuk memberikan rekomendasi tempat wisata berdasarkan preferensi pengguna.',
+      'North Sumatra tourism application uses AI implementation to provide recommendations for tourist attractions based on user preferences. Currently still in development.',
     tags: ['React+Vite', 'Tailwind CSS', 'Express', 'Tensorflow'],
-    liveUrl: '#',
-    repoUrl: '#',
+    liveUrl: 'noopener noreferrer',
+    repoUrl: 'noopener noreferrer',
   },
   {
-    image: 'https://placehold.co/600x400/6B7280/3B82F6?text=Project+Three',
-    title: 'Develop',
-    description: 'Sedang dalam masa pengembangan.',
-    tags: ['React+Vite', 'Node.js', 'Express'],
-    liveUrl: '#',
-    repoUrl: '#',
+    image: portfolioImg,
+    title: 'Portofolio',
+    description:
+      'A personal portfolio powered by React and Tailwind CSS, designed to present my work in a fast and modern interface.',
+    tags: ['React+Vite', 'tailwind css'],
+    liveUrl: 'noopener noreferrer',
+    repoUrl: 'https://github.com/Dzakkiyansyah/Portfolio',
   },
 ];
 
@@ -57,7 +59,7 @@ const Portfolio = () => {
             Featured Projects
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-lg text-subtle dark:text-subtle-dark drop-shadow-sm">
-            Beberapa karya pilihan yang menunjukkan keahlian dan hasrat saya.
+            Some selected works that show my skills.
           </p>
         </Motion.div>
         <Motion.div
